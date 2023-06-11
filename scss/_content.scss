@@ -1,0 +1,64 @@
+@use './variables' as *;
+
+main {
+	width: 1500px;
+	height: 600px;
+
+	margin-inline: auto;
+
+	display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+	grid-template-areas:
+	"calculator learn learn"
+	"calculator test test";
+	gap: 2rem;
+	
+	.cart {
+		background-color: $green-400;
+		border-radius: $br-radius-200;
+		padding: 1rem;
+        transition: all .125s ease-out;
+ 
+        &__header {
+            color: $green-600;
+            font-size: $f-size-800;
+            font-family: 'Share Tech', sans-serif;
+            font-weight: 400;
+            letter-spacing: 2px;
+    
+            text-align: center;
+        }
+
+        &:hover  {
+            box-shadow: 0px 0px 10px 0px $green-600;
+            border: 3px dashed $green-600;
+            
+            .cart__header {
+                font-size: 2.5rem;
+                transition: font-size .125s ease-out;
+            }
+        }
+        
+        &:not(:hover) {
+            box-shadow: none;
+            border: none;
+            
+            .cart__header {
+                font-size: $f-size-600;
+                transition: font-size .125s ease-out;
+            }
+        }
+	}
+
+	.calculator {
+		grid-area: calculator;
+	}
+	.test {
+		grid-area: test;
+	}
+	.learn {
+		grid-area: learn;
+	}
+}
