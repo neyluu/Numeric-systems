@@ -1,0 +1,90 @@
+@use './variables' as *;
+
+.calculator {
+    max-width: 800px;
+    height: 100%;
+    margin-inline: auto;
+    padding: 1rem;
+
+    background-color: $green-400;
+    border-radius: $br-radius-200;
+
+    &__title {
+        font-family: 'Share Tech', sans-serif;
+        text-align: center;
+        font-size: $f-size-800;
+        color: $green-600;
+    }
+
+    &__label {
+        font-size: $f-size-500;
+        font-family: 'M PLUS 2', sans-serif;
+        text-align: center;
+        color: $yellow-400;
+        padding: 1rem;
+    } 
+
+    &__select {
+        width: 30%;
+        padding: .5rem;
+        border-radius: $br-radius-800;
+        margin-inline: auto;
+        font-size: $f-size-400;
+        text-align: center;
+
+        background-color: $green-600;
+        color: $yellow-400;
+    }
+
+    
+    &__choose {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        
+        &--from, &--for {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .converting-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 4rem;
+        gap: 2rem;
+
+        &__title {
+            font-family: 'Share Tech', sans-serif;
+            color: $yellow-400;
+            font-size: $f-size-500;
+            text-align: center;
+            word-spacing: .3rem;
+            
+            &--option {
+                background-color: $green-600;
+                color: $yellow-400;
+                padding: .75rem 1rem;
+                border-radius: $br-radius-800;
+            }
+        }
+
+
+        &__exchange-button {
+            border: none;
+            height: 40px;
+            width: 40px;
+            background-color: $green-600;
+            mask: url("../svg/exchange_icon.svg") no-repeat center;
+
+            &:hover {
+                transform: scale(1.15) rotateZ(45deg);
+                background-color: $green-800;
+                transition: all .2s;
+            }
+            &:not(:hover) {
+                transition: all .2s;
+            }
+        }
+    }
+}

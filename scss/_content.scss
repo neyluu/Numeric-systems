@@ -1,11 +1,8 @@
 @use './variables' as *;
 
-main {
-	width: 1500px;
-	height: 600px;
-
-	margin-inline: auto;
-
+.main-page {
+    width: 100%;
+    height: 100%;
 	display: grid;
     grid-auto-columns: 1fr; 
     grid-template-columns: 1fr 1fr 1fr; 
@@ -52,13 +49,13 @@ main {
         }
 	}
 
-	.calculator {
+	&__calculator {
 		grid-area: calculator;
 	}
-	.test {
+	&__test {
 		grid-area: test;
 	}
-	.learn {
+    &__learn {
 		grid-area: learn;
 	}
 }

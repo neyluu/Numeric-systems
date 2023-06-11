@@ -28,18 +28,29 @@ header {
 			font-size: 3rem;
 		}
 
+        $title-animation-speed: .3s;
+
         &:after {
             content: '';
             display: block;
             border-bottom: 5px dashed $green-600;
             // transform: scaleX(0);
             transform: translateX(-500px);
-            transition: transform .5s ease-in-out;
+            transition: transform $title-animation-speed ease-in-out;
             transform-origin: 0% 50%;
         }
         
         &:hover:after {
             transform: translateX(0);
+        }
+
+        &:hover {
+            letter-spacing: 3px;
+            transition: letter-spacing $title-animation-speed ease-in-out;
+        }
+
+        &:not(:hover) {
+            transition: letter-spacing $title-animation-speed ease-in-out;
         }
 	}
 

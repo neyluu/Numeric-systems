@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Systemy numeryczne</title>
+
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">SYSTEMY NUMERYCZNE</a>
+        </h1>
+        <nav>
+            <a href="calculator.html">Kalkulator</a>
+            <a href="test.html">Test</a>
+            <a href="learn.html">Nauka</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="calculator">
+            <h2 class="calculator__title">Kalkulator</h2>
+            
+            <div class="calculator__choose">
+                <div class="calculator__choose--from">
+                    <label for="systems-from" class="calculator__label">Wybierz system numeryczny, z którego chcesz przeliczać:</label>
+                    <select name="systems-from" id="systems-from" class="calculator__select">
+                        <option value="">binarny (bin)</option>
+                        <option value="">ósemkowy (oct)</option>
+                        <option value="">dziesiętny (dec)</option>
+                        <option value="">szesnastkowy (hex)</option>
+                    </select>
+                </div>
+               
+                <div class="calculator__choose--for">
+                    <label for="systems_for" class="calculator__label">Wybierz system numeryczny na jaki chcesz przeliczyć:</label>
+                    <select name="systems-for" id="systems-for" class="calculator__select">
+                        <option value="">binarny (bin)</option>
+                        <option value="">ósemkowy (oct)</option>
+                        <option value="">dziesiętny (dec)</option>
+                        <option value="">szesnastkowy (hex)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="converting-info">
+                <p class="converting-info__title">
+                    Przeliczasz z 
+                    <span class="converting-info__title--option">binarny (bin)</span> 
+                    na 
+                    <span class="converting-info__title--option">dziesiętny (dec)</span>
+                </p>
+
+                <button class="converting-info__exchange-button"></button>
+            </div>
+
+
+        </div>
+    </main>
+
+    <!-- <footer>
+        <h3>Coded by <a href="https://github.com/neyluu" target="_blank">Neyluu</a></h3>
+    </footer> -->
+</body>
+</html>

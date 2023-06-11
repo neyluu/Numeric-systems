@@ -1,0 +1,16 @@
+nauka
+    opis ręcznego przeliczania
+        ładny rysunek jak to działa
+    algorytm do przeliczania
+        wybór języka js/python
+
+kalkulator 
+    wybór z czego przeliczanie
+    wybór na co przeliczanie
+    grafika (z czego) => (na co)
+
+test
+    jakie dzialanie, czy po prostu przeliczanie liczby
+    z jakiego systemu, na jaki system
+    wyniki? 
+    limit czasowy
