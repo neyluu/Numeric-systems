@@ -171,6 +171,9 @@ header nav a:hover, header nav a:focus {
   padding: 0.75rem 1rem;
   border-radius: 3rem;
 }
+.calculator .converting-info__title--option:hover {
+  cursor: default;
+}
 .calculator .converting-info__exchange-button {
   border: none;
   height: 40px;
@@ -182,10 +185,37 @@ header nav a:hover, header nav a:focus {
 .calculator .converting-info__exchange-button:hover {
   transform: scale(1.15) rotateZ(45deg);
   background-color: #3c5239;
+  cursor: pointer;
   transition: all 0.2s;
 }
 .calculator .converting-info__exchange-button:not(:hover) {
   transition: all 0.2s;
+}
+.calculator .result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.calculator .result__label {
+  color: #FEFFDE;
+  font-size: 1.25rem;
+  font-family: "M PLUS 2", sans-serif;
+}
+.calculator .result__field {
+  padding: 0.5rem;
+  width: 60%;
+  border-radius: 3rem;
+  border: 2px dashed #52734D;
+  background-color: #DDFFBC;
+  font-size: 1.25rem;
+  font-family: "Share Tech", sans-serif;
+}
+.calculator .result__input, .calculator .result__output {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
 }
 
 * {

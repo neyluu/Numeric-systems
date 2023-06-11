@@ -9,6 +9,8 @@ kalkulator
     wybór na co przeliczanie
     grafika (z czego) => (na co)
 
+    dzialania matematyczne + - / *
+
 test
     jakie dzialanie, czy po prostu przeliczanie liczby
     z jakiego systemu, na jaki system

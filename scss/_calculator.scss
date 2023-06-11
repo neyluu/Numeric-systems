@@ -66,6 +66,16 @@
                 color: $yellow-400;
                 padding: .75rem 1rem;
                 border-radius: $br-radius-800;
+
+                &:hover {
+                    // background-color: $green-800;
+                    // transition: all .1s ease-in;
+                    cursor: default;
+                }
+
+                // &:not(:hover) {
+                //     transition: all .1s ease-in;
+                // }
             }
         }
 
@@ -80,11 +90,43 @@
             &:hover {
                 transform: scale(1.15) rotateZ(45deg);
                 background-color: $green-800;
+                cursor: pointer;
                 transition: all .2s;
             }
             &:not(:hover) {
                 transition: all .2s;
             }
+        }
+    }
+
+    .result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        margin-top: 1rem;
+
+        &__label {
+            color: $yellow-400;
+            font-size: $f-size-400;
+            font-family: 'M PLUS 2', sans-serif;
+        }
+
+        &__field {
+            padding: .5rem;
+            width: 60%;
+            border-radius: $br-radius-800;
+            border: 2px dashed $green-600;
+            background-color: $green-200;
+            font-size: $f-size-400;
+            font-family: 'Share Tech', sans-serif;
+        }
+
+        &__input, &__output {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
         }
     }
 }
