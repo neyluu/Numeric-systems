@@ -7,9 +7,11 @@
     <title>Systemy numeryczne</title>
 
     <link rel="stylesheet" href="scss/main.css">
+
+    <script src="js/calculatorModeSwitch.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="page-header">
         <h1>
             <a href="index.html">SYSTEMY NUMERYCZNE</a>
         </h1>
@@ -22,7 +24,26 @@
 
     <main>
         <div class="calculator">
-            <h2 class="calculator__title">Kalkulator</h2>
+            <header class="calculator__header">
+                <input type="radio" name="mode" id="calculator" checked>
+                <label for="calculator" class="calc">Kalkulator</label>
+            
+                <input type="radio" name="mode" id="converter">
+                <label for="converter" class="converter">Konwerter</label>
+                
+                <div class="calculator__header--tab"> </div>
+            </header>
+
+
+            
+            
+            
+            
+            
+            
+
+            <!-- OLD VERSION -->
+            <!-- <h2 class="calculator__title">Kalkulator</h2>
             
             <div class="calculator__choose">
                 <div class="calculator__choose--from">
@@ -67,7 +88,7 @@
                     <label for="output-number" class="result__label">dziesiętny (dec):</label>
                     <input type="number" name="output-number" id="output-number" class="result__field">
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
 

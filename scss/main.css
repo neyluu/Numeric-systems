@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300;400;500;700&display=swap");
-header {
+.page-header {
   max-width: 1500px;
   height: 100px;
   border-radius: 0 0 0.5rem 0.5rem;
@@ -12,18 +12,18 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-header h1 {
+.page-header h1 {
   font-family: "Share Tech", sans-serif;
   font-weight: 400;
   letter-spacing: 2px;
   overflow: hidden;
 }
-header h1 a {
+.page-header h1 a {
   color: #52734D;
   text-decoration: none;
   font-size: 3rem;
 }
-header h1:after {
+.page-header h1:after {
   content: "";
   display: block;
   border-bottom: 5px dashed #52734D;
@@ -31,22 +31,22 @@ header h1:after {
   transition: transform 0.3s ease-in-out;
   transform-origin: 0% 50%;
 }
-header h1:hover:after {
+.page-header h1:hover:after {
   transform: translateX(0);
 }
-header h1:hover {
+.page-header h1:hover {
   letter-spacing: 3px;
   transition: letter-spacing 0.3s ease-in-out;
 }
-header h1:not(:hover) {
+.page-header h1:not(:hover) {
   transition: letter-spacing 0.3s ease-in-out;
 }
-header nav {
+.page-header nav {
   display: flex;
   justify-content: space-between;
   width: 40%;
 }
-header nav a {
+.page-header nav a {
   font-family: "M PLUS 2", sans-serif;
   font-size: 1.75rem;
   text-decoration: none;
@@ -56,7 +56,7 @@ header nav a {
   border-radius: 3rem;
   transition: all 0.1s ease-out;
 }
-header nav a:hover, header nav a:focus {
+.page-header nav a:hover, .page-header nav a:focus {
   outline: 3px dashed #52734D;
   box-shadow: 0px 0px 10px 0px #52734D;
   background-color: #52734D;
@@ -120,102 +120,59 @@ header nav a:hover, header nav a:focus {
   background-color: #91C788;
   border-radius: 0.5rem;
 }
-.calculator__title {
-  font-family: "Share Tech", sans-serif;
-  text-align: center;
-  font-size: 2.25rem;
-  color: #52734D;
-}
-.calculator__label {
-  font-size: 1.5rem;
-  font-family: "M PLUS 2", sans-serif;
-  text-align: center;
-  color: #FEFFDE;
-  padding: 1rem;
-}
-.calculator__select {
-  width: 30%;
-  padding: 0.5rem;
+.calculator__header {
+  width: 60%;
+  height: 3.5rem;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid #52734D;
   border-radius: 3rem;
   margin-inline: auto;
-  font-size: 1.25rem;
-  text-align: center;
-  background-color: #52734D;
-  color: #FEFFDE;
-}
-.calculator__choose {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.calculator__choose--from, .calculator__choose--for {
   display: flex;
-  flex-direction: column;
+  position: relative;
 }
-.calculator .converting-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 4rem;
-  gap: 2rem;
+.calculator__header input {
+  display: none;
 }
-.calculator .converting-info__title {
-  font-family: "Share Tech", sans-serif;
+.calculator__header input#calculator:checked ~ label.calc {
   color: #FEFFDE;
-  font-size: 1.5rem;
-  text-align: center;
-  word-spacing: 0.3rem;
+  transition: 0.3s ease-in-out;
 }
-.calculator .converting-info__title--option {
-  background-color: #52734D;
+.calculator__header input#converter:checked ~ .calculator__header--tab {
+  left: 50%;
+  border-radius: 0 3rem 3rem 0;
+}
+.calculator__header input#converter:checked ~ label.converter {
   color: #FEFFDE;
-  padding: 0.75rem 1rem;
-  border-radius: 3rem;
+  transition: 0.3s ease-in-out;
 }
-.calculator .converting-info__title--option:hover {
-  cursor: default;
-}
-.calculator .converting-info__exchange-button {
-  border: none;
-  height: 40px;
-  width: 40px;
-  background-color: #52734D;
-  -webkit-mask: url("../svg/exchange_icon.svg") no-repeat center;
-          mask: url("../svg/exchange_icon.svg") no-repeat center;
-}
-.calculator .converting-info__exchange-button:hover {
-  transform: scale(1.15) rotateZ(45deg);
-  background-color: #3c5239;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-.calculator .converting-info__exchange-button:not(:hover) {
-  transition: all 0.2s;
-}
-.calculator .result {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-.calculator .result__label {
-  color: #FEFFDE;
-  font-size: 1.25rem;
-  font-family: "M PLUS 2", sans-serif;
-}
-.calculator .result__field {
+.calculator__header label {
+  width: 50%;
+  height: 100%;
   padding: 0.5rem;
-  width: 60%;
-  border-radius: 3rem;
-  border: 2px dashed #52734D;
-  background-color: #DDFFBC;
-  font-size: 1.25rem;
+  display: grid;
+  place-content: center;
   font-family: "Share Tech", sans-serif;
+  font-size: 2rem;
+  color: #52734D;
+  z-index: 1;
+  transition: color 0.3s ease-in-out;
 }
-.calculator .result__input, .calculator .result__output {
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
+.calculator__header label:hover {
+  cursor: pointer;
+  color: #3c5239;
+  transition: color 0.1s;
+}
+.calculator__header--tab {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: #52734D;
+  border-radius: 3rem 0 0 3rem;
+  transition: 0.3s ease-in-out;
 }
 
 * {
