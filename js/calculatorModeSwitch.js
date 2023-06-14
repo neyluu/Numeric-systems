@@ -1,24 +1,11 @@
 const calculatorButton = document.querySelector(".calc")
-const converterButton = document.querySelector(".convert")
-const backgroundLeft = document.querySelector(".option-cal")
-const backgroundRight = document.querySelector(".option-con")
+const converterButton = document.querySelector(".converter")
 
-
-
-
-
-// if(document.querySelector("#calculator").checked)
-// {
-//      backgroundLeft.style.backgroundColor = "#52734D";
-// }
-
-// calculatorButton.addEventListener("click", () => {
-//     backgroundLeft.style.backgroundColor = "#52734D";
-//     backgroundRight.style.backgroundColor = "#91C788"
-// })
-// converterButton.addEventListener("click", () => {
-//     backgroundLeft.style.backgroundColor = "#91C788"
-//     backgroundRight.style.backgroundColor = "#52734D";
-// })
-
-
+calculatorButton.addEventListener("click", () => {
+    document.querySelector(".converter-tab").style.transform = "translateX(0)"
+    document.querySelector(".calculator-tab").style.transform = "translateX(0)"
+})
+converterButton.addEventListener("click", () => {
+    document.querySelector(".converter-tab").style.transform = "translateX(100%)"
+    document.querySelector(".calculator-tab").style.transform = "translateX(100%)"
+})

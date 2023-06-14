@@ -1,5 +1,7 @@
 @use './variables' as *;
 
+$moveAnimation: .3s ease-in-out;
+
 .calculator {
     max-width: 800px;
     height: 100%;
@@ -7,6 +9,11 @@
     padding: 1rem;
     background-color: $green-400;
     border-radius: $br-radius-200;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
 
     &__header {
         width: 60%;
@@ -18,8 +25,6 @@
         margin-inline: auto;
         display: flex;
         position: relative;
-
-        $moveAnimation: .3s ease-in-out;
 
         input {
             display: none;
@@ -75,7 +80,32 @@
             border-radius: $br-radius-800 0 0 $br-radius-800;
             transition: $moveAnimation;
         }
+    }
+    
+    .modes {
+        display: flex;
+        height: 100%;
+        position: relative;
+        // overflow: hidden;
 
+        .mode-tab {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .converter-tab {
+            background-color: blue;
+            right: 100%;
+            transition: $moveAnimation;
+        }
+
+        .calculator-tab {
+            background-color: red;
+            transition: $moveAnimation;
+        }
+    
+    }
 
 
 
@@ -109,7 +139,7 @@
         //         }
         //     }
         // }
-    }
+    
 
 
 
