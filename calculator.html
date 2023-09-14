@@ -36,10 +36,69 @@
 
             <div class="modes">
                 <div class="converter-tab mode-tab">
-    
+            
                 </div>
+                
                 <div class="calculator-tab mode-tab">
-    
+                    
+                    <div class="enter-number">
+                        <div class="enter-number__choose">
+                            <p class="enter-number__choose--title">Pierwsza liczba:</p>
+                            
+                            <div class="enter-number__choose--select">
+                                <select name="number1" id="number1">
+                                    <option value="">binarny (bin)</option>
+                                    <option value="">ósemkowy (oct)</option>
+                                    <option value="">dziesiętny (dec)</option>
+                                    <option value="">szesnastkowy (hex)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <input type="text" class="enter-number__input" placeholder="Wpisz liczbę...">
+                    </div>
+
+                    <div class="enter-number">
+                        <div class="enter-number__choose">
+                            <p class="enter-number__choose--title">Druga liczba:</p>
+                            
+                            <div class="enter-number__choose--select">
+                                <select name="number2" id="number2">
+                                    <option value="">binarny (bin)</option>
+                                    <option value="">ósemkowy (oct)</option>
+                                    <option value="">dziesiętny (dec)</option>
+                                    <option value="">szesnastkowy (hex)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <input type="text" class="enter-number__input" placeholder="Wpisz liczbę...">
+                    </div>
+                
+
+                    <div class="choose-operation">
+                        <p class="choose-operation__title">Jakie działanie chcesz wykonać?</p>
+
+                        <div class="choose-operation__operations">
+                            <input type="radio" name="operation" id="plus-operator">
+                            <label for="plus-operator">+</label>
+                            
+                            <input type="radio" name="operation" id="minus-operator">
+                            <label for="minus-operator">-</label>
+                            
+                            <input type="radio" name="operation" id="multiply-operator">
+                            <label for="multiply-operator">*</label>
+                           
+                            <input type="radio" name="operation" id="divide-operator">
+                            <label for="divide-operator">/</label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="calculator-tab__button">Oblicz</button>
+
+                    <div class="calculator-tab__result">
+
+                    </div>
                 </div>
             </div>
 

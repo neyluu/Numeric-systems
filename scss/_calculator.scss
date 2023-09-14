@@ -62,6 +62,7 @@ $moveAnimation: .3s ease-in-out;
             color: $green-600;
             z-index: 1;
             transition: color $moveAnimation;
+            
             &:hover {
                 cursor: pointer;
                 color: $green-800;
@@ -92,19 +93,146 @@ $moveAnimation: .3s ease-in-out;
             width: 100%;
             height: 100%;
             position: absolute;
+
+            padding: 1rem;
         }
 
         .converter-tab {
-            background-color: blue;
+            border: 1px solid red;
             right: 100%;
             transition: $moveAnimation;
         }
 
         .calculator-tab {
-            background-color: red;
+            border: 1px solid red;
             transition: $moveAnimation;
+
+            .enter-number {
+                margin-bottom: 1rem;
+
+                &__choose {
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 1rem;
+
+                    &--title {
+                        font-size: $f-size-500;
+                        font-family: 'M PLUS 2', sans-serif;
+                        color: $yellow-400;
+                    }
+
+                    &--select {
+                        position: relative;
+
+                        select {
+                            font-size: $f-size-400;
+                            border-radius: $br-radius-800;
+                            padding: .5rem 3rem;
+
+                            background-color: $green-600;
+                            color: $yellow-400;
+                            
+                            appearance: none;
+                            outline: transparent;
+                        }
+
+                        &::before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            height: 100%;
+                            aspect-ratio: 1 / 1;
+                            background-color: $green-800;
+                            border-radius: $br-radius-800;
+                            background-image: url('../svg/arrow_down_icon.svg');
+
+                        }
+                    }
+
+                    // &--select {
+                    //     font-size: $f-size-400;
+                    //     border-radius: $br-radius-800;
+                    //     padding: .5rem 1rem;
+
+                    //     background-color: $green-600;
+                    //     color: $yellow-400;
+                        
+                    //     appearance: none;
+                    //     position: relative;
+                    // }
+                }
+
+                &__input {
+                    width: 100%;
+                    padding: .5rem 1rem;
+                    border-radius: $br-radius-800;
+                    border: 2px solid $green-600;
+                    background-color: $yellow-400;
+                    font-size: $f-size-400;
+                    color: $green-600;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    outline: transparent;
+
+                    &::placeholder {
+                        color: $green-400;
+                        text-transform: none;
+                    }
+                }
+            }
+
+            .choose-operation {
+                &__title {
+                    font-size: $f-size-500;
+                    font-family: 'M PLUS 2', sans-serif;
+                    color: $yellow-400;
+                    margin-bottom: 1rem;
+                }
+
+                &__operations {
+                    input {
+                        display: none;
+
+                        &:checked + label{
+                            background-color: $green-800;
+                        }
+                    }
+
+                    label {
+                        font-size: $f-size-800;
+                        color: $yellow-400;
+                        font-family: 'Share Tech', sans-serif;
+                        background-color: $green-600;
+                        border-radius: $br-radius-800;
+                        padding: .25rem 2rem;
+                        margin-right: 1rem;
+
+                        &:hover {
+                            background-color: $green-800;
+                            transition: .3s;
+                        }
+
+                        &:not(:hover)
+                        {
+                            background-color: $green-600;
+                            transition: .3s;
+                        }
+                    }
+                }
+            }
+
+            &__button {
+                margin-top: 1rem;
+                font-size: $f-size-600;
+                padding: .5rem 2rem;
+                border-radius: $br-radius-800;
+                margin-inline: auto;
+            }
         }
-    
     }
 
 

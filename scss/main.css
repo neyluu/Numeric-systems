@@ -187,15 +187,113 @@
   width: 100%;
   height: 100%;
   position: absolute;
+  padding: 1rem;
 }
 .calculator .modes .converter-tab {
-  background-color: blue;
+  border: 1px solid red;
   right: 100%;
   transition: 0.3s ease-in-out;
 }
 .calculator .modes .calculator-tab {
-  background-color: red;
+  border: 1px solid red;
   transition: 0.3s ease-in-out;
+}
+.calculator .modes .calculator-tab .enter-number {
+  margin-bottom: 1rem;
+}
+.calculator .modes .calculator-tab .enter-number__choose {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.calculator .modes .calculator-tab .enter-number__choose--title {
+  font-size: 1.5rem;
+  font-family: "M PLUS 2", sans-serif;
+  color: #FEFFDE;
+}
+.calculator .modes .calculator-tab .enter-number__choose--select {
+  position: relative;
+}
+.calculator .modes .calculator-tab .enter-number__choose--select select {
+  font-size: 1.25rem;
+  border-radius: 3rem;
+  padding: 0.5rem 3rem;
+  background-color: #52734D;
+  color: #FEFFDE;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: transparent;
+}
+.calculator .modes .calculator-tab .enter-number__choose--select::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: #3c5239;
+  border-radius: 3rem;
+  background-image: url("../svg/arrow_down_icon.svg");
+}
+.calculator .modes .calculator-tab .enter-number__input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  border: 2px solid #52734D;
+  background-color: #FEFFDE;
+  font-size: 1.25rem;
+  color: #52734D;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  outline: transparent;
+}
+.calculator .modes .calculator-tab .enter-number__input::-moz-placeholder {
+  color: #91C788;
+  text-transform: none;
+}
+.calculator .modes .calculator-tab .enter-number__input::placeholder {
+  color: #91C788;
+  text-transform: none;
+}
+.calculator .modes .calculator-tab .choose-operation__title {
+  font-size: 1.5rem;
+  font-family: "M PLUS 2", sans-serif;
+  color: #FEFFDE;
+  margin-bottom: 1rem;
+}
+.calculator .modes .calculator-tab .choose-operation__operations input {
+  display: none;
+}
+.calculator .modes .calculator-tab .choose-operation__operations input:checked + label {
+  background-color: #3c5239;
+}
+.calculator .modes .calculator-tab .choose-operation__operations label {
+  font-size: 2.25rem;
+  color: #FEFFDE;
+  font-family: "Share Tech", sans-serif;
+  background-color: #52734D;
+  border-radius: 3rem;
+  padding: 0.25rem 2rem;
+  margin-right: 1rem;
+}
+.calculator .modes .calculator-tab .choose-operation__operations label:hover {
+  background-color: #3c5239;
+  transition: 0.3s;
+}
+.calculator .modes .calculator-tab .choose-operation__operations label:not(:hover) {
+  background-color: #52734D;
+  transition: 0.3s;
+}
+.calculator .modes .calculator-tab__button {
+  margin-top: 1rem;
+  font-size: 1.75rem;
+  padding: 0.5rem 2rem;
+  border-radius: 3rem;
+  margin-inline: auto;
 }
 
 * {
